@@ -1,0 +1,9 @@
+from machine import Pin as pin ,PWM
+import time , utime 
+bips = PWM(pin(15))
+bips.freq(6000)
+def bip (x):
+    bips.duty_u16(65533)
+    time.sleep(x)
+    bips.duty_u16(0)
+
